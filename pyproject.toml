@@ -1,0 +1,22 @@
+[project]
+name = "llm-multi"
+version = "0.1.0"
+description = "A plugin for LLM that combines file bundling and LLM mapping capabilities"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "llm>=0.26",
+]
+
+[project.entry-points.llm]
+llm_multi = "llm_multi"
+
+[build-system]
+requires = ["uv_build>=0.8.11,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+    "ruff>=0.8.0",
+]
